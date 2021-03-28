@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1616941202 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\main.cpp
+	<iostream>
+	"pokemon.h"
+	"schiggy.h"
+	"glumanda.h"
+	"game.h"
+	"team.h"
+
+1616081984 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\character.cpp
+	<iostream>
+	<assert.h>
+	<time.h>
+	"character.h"
+
+1616082238 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\character.h
+
+1616934612 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.cpp
+	<iostream>
+	<assert.h>
+	<time.h>
+	<string>
+	"pokemon.h"
+
+1616940189 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.h
+	<string>
+	"attack.h"
+	"attackSlot.h"
+	"effect.h"
+
+1616934473 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\schiggy.cpp
+	"schiggy.h"
+
+1616091018 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\schiggy.h
+	"pokemon.h"
+
+1616934491 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\glumanda.cpp
+	"glumanda.h"
+
+1616089378 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\glumanda.h
+	"pokemon.h"
+
+1616087484 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\custompokemon.cpp
+	"customPokemon.h"
+
+1616087484 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\custompokemon.h
+	"pokemon.h"
+
+1616957971 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\game.cpp
+	<iostream>
+	<time.h>
+	"game.h"
+	"pokemon.h"
+	"schiggy.h"
+	"glumanda.h"
+
+1616957863 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\game.h
+	"pokemon.h"
+	"team.h"
+	"characters.h"
+	"winStruct.h"
+
+1616931401 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\attack.h
+
+1616931436 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\attackslot.h
+
+1616931477 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\effect.h
+
+1616931530 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\characters.h
+
+1616933880 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\winstruct.h
+
+1616957850 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\team.h
+	"pokemonActive.h"
+	"pokemon.h"
+
+1616942297 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemonactive.h
+
+1616958197 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\team.cpp
+	<iostream>
+	"team.h"
+
