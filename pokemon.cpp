@@ -213,7 +213,7 @@ void Pokemon::CheckDefense(int thisAp, int &otherDef, int &otherHp, int dmg){
     }
 }
 
-void Pokemon::tackle(Pokemon& other){
+void Pokemon::tackle(Pokemon &other){
     int dmg = 35;
     int randomNum;
     time_t t;
@@ -229,7 +229,7 @@ void Pokemon::tackle(Pokemon& other){
     }
 }
 
-void Pokemon::blubber(Pokemon& other){
+void Pokemon::blubber(Pokemon &other){
     int dmg = 20;
     int randomNum;
     time_t t;
@@ -246,14 +246,14 @@ void Pokemon::blubber(Pokemon& other){
     CheckDefense(this->ap, other.def, other.hp, dmg);
 };
 
-void Pokemon::kratzer(Pokemon& other){
+void Pokemon::kratzer(Pokemon &other){
     int dmg = 40;
 
     std::cout << Pokemon::name << " setzt Kratzer ein." << std::endl;
     CheckDefense(this->ap, other.def, other.hp, dmg);
 };
 
-void Pokemon::glut(Pokemon& other){
+void Pokemon::glut(Pokemon &other){
     int dmg = 40;
     int randomNum;
     time_t t;

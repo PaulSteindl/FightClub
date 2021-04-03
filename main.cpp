@@ -18,7 +18,8 @@ int main()
         input = game.GetMenuInput();
         game.startGameMode(input);
         game.printStats();
-        input = game.wannaContinue();
+        std::cout << std::endl << "Willst du nochmal Spielen [y/n]? ";
+        input = game.getYorN();
         if(input  == 'n'){
             break;
         }
