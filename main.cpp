@@ -4,11 +4,17 @@
 #include "glumanda.h"
 #include "game.h"
 #include "team.h"
+#include "test.h"
+
+#define RUN_TESTS 1
 
 using namespace std;
 
 int main()
 {
+#if RUN_TESTS
+    runTests();
+#else
     Game game;
     char input = 't';
 
@@ -24,6 +30,6 @@ int main()
             break;
         }
     }
-
+#endif // RUN_TESTS
     return 0;
 }

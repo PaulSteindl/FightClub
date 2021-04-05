@@ -48,6 +48,8 @@
 		<Unit filename="schiggy.h" />
 		<Unit filename="team.cpp" />
 		<Unit filename="team.h" />
+		<Unit filename="test.cpp" />
+		<Unit filename="test.h" />
 		<Unit filename="winStruct.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

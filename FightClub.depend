@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1617364192 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\main.cpp
+1617640025 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\main.cpp
 	<iostream>
 	"pokemon.h"
 	"schiggy.h"
 	"glumanda.h"
 	"game.h"
 	"team.h"
+	"test.h"
 
 1616081984 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\character.cpp
 	<iostream>
@@ -15,7 +16,7 @@
 
 1616082238 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\character.h
 
-1617362471 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.cpp
+1617643073 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.cpp
 	<iostream>
 	<assert.h>
 	<time.h>
@@ -79,4 +80,17 @@
 1617362805 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\team.cpp
 	<iostream>
 	"team.h"
+
+1617645693 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\test.h
+
+1617645693 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\test.cpp
+	"test.h"
+	"effect.h"
+	"pokemon.h"
+	"schiggy.h"
+	"glumanda.h"
+	"game.h"
+	"team.h"
+	<iostream>
+	<assert.h>
 

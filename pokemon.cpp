@@ -4,6 +4,7 @@
 #include <string>
 #include "pokemon.h"
 
+//Fügt referenz auf Attack-funktion zu jeweiligen AttackSolt
 void Pokemon::selectAttack(def_attack attack, def_attackSlot attackSlot){
     if(attackSlot == sl_attackSlot1){
         switch(attack){
@@ -51,9 +52,10 @@ Pokemon::Pokemon(def_attack attack1, def_attack attack2){
     selectAttack(attack2, sl_attackSlot2);
 }
 
+//brauch ich leer um ein Spiel starten zu können
 Pokemon::Pokemon(){}
 
-//überprüfung beheben
+//wird für customPokemon verwendet, liest ein wie skillpunkte verteilt werden und ob noch welche übrig sind
 int Pokemon::getSkillpointInput(){
     std::string input;
     int eingabe = -1;
@@ -71,6 +73,7 @@ int Pokemon::getSkillpointInput(){
     return 0;
 }
 
+//setzt Attack-Namen und setzt funktionspointer
 void Pokemon::setCustomAttacks(){
     int eingabe = -1;
     std::string AttackInput;
@@ -202,6 +205,7 @@ Pokemon::Pokemon(bool custom){
 
 Pokemon::~Pokemon(){}
 
+//wird schaden berechnet
 void Pokemon::CheckDefense(int thisAp, int &otherDef, int &otherHp, int dmg){
     if(thisAp > otherDef){
         otherHp -= dmg + (thisAp - otherDef);
@@ -213,12 +217,11 @@ void Pokemon::CheckDefense(int thisAp, int &otherDef, int &otherHp, int dmg){
     }
 }
 
+//5% das es verfehlt
 void Pokemon::tackle(Pokemon &other){
     int dmg = 35;
     int randomNum;
-    time_t t;
 
-    srand((unsigned) time(&t));
     randomNum = rand() % 100;
 
     if(randomNum < 5){
@@ -229,12 +232,11 @@ void Pokemon::tackle(Pokemon &other){
     }
 }
 
+//33% das initative gesenkt wird
 void Pokemon::blubber(Pokemon &other){
     int dmg = 20;
     int randomNum;
-    time_t t;
 
-    srand((unsigned) time(&t));
     randomNum = rand() % 3;
 
     std::cout << Pokemon::name << " setzt Blubber ein." << std::endl;
@@ -253,12 +255,11 @@ void Pokemon::kratzer(Pokemon &other){
     CheckDefense(this->ap, other.def, other.hp, dmg);
 };
 
+//10% das gegner brennt, ap wird halbiert und er bekommt 6,25% maxHp Schaden pro Runde
 void Pokemon::glut(Pokemon &other){
     int dmg = 40;
     int randomNum;
-    time_t t;
 
-    srand((unsigned) time(&t));
     randomNum = rand() % 10;
 
     std::cout << Pokemon::name << " setzt Glut ein." << std::endl;
