@@ -6,9 +6,6 @@
 
 class Team{
     public:
-        Pokemon pokemon1;
-        Pokemon pokemon2;
-
         Team(Pokemon pokemon1, Pokemon pokemon2);
 
         ~Team();
@@ -17,8 +14,8 @@ class Team{
         void setActivePokemon(def_pokemonActive active){activePokemon = active;}
 
         std::string getTeamName()  const {return teamName;}
-        Pokemon getPokemon1() const {return pokemon1;}
-        Pokemon getPokemon2() const {return pokemon2;}
+        Pokemon & getPokemon1(){return pokemon1;}
+        Pokemon & getPokemon2(){return pokemon2;}
         def_pokemonActive getActivePokemon() const {return activePokemon;}
         Pokemon getPrimary();
 
@@ -28,6 +25,8 @@ class Team{
         std::string teamName;
         Pokemon &primaryPokemon;
         def_pokemonActive activePokemon = pa_pokemon1Active;
+        Pokemon pokemon1;
+        Pokemon pokemon2;
 };
 
 #endif // TEAM_H_INCLUDED

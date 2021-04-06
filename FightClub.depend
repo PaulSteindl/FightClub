@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1617640025 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\main.cpp
+1617695658 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\main.cpp
 	<iostream>
 	"pokemon.h"
 	"schiggy.h"
@@ -23,7 +23,7 @@
 	<string>
 	"pokemon.h"
 
-1616940189 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.h
+1617693875 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\pokemon.h
 	<string>
 	"attack.h"
 	"attackSlot.h"
@@ -47,7 +47,7 @@
 1616087484 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\custompokemon.h
 	"pokemon.h"
 
-1617365098 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\game.cpp
+1617696859 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\game.cpp
 	<iostream>
 	<time.h>
 	"game.h"
@@ -71,7 +71,7 @@
 
 1616933880 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\winstruct.h
 
-1617362805 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\team.h
+1617696879 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\team.h
 	"pokemonActive.h"
 	"pokemon.h"
 
@@ -83,7 +83,7 @@
 
 1617645693 c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\test.h
 
-1617645693 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\test.cpp
+1617696059 source:c:\users\gerhard\desktop\fh\ooprogramieren\fightclub\test.cpp
 	"test.h"
 	"effect.h"
 	"pokemon.h"

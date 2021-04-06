@@ -4,7 +4,7 @@
 #include "pokemon.h"
 #include "schiggy.h"
 #include "glumanda.h"
-
+//Nur schrift fürs MainMenu
 void Game::mainMenu(){
     std::cout << "Willkommen bei Pokemon Ultra Delux Smash and Crash!" << std::endl << "Sollten Sie von Nintendo sein bitte verklagen Sie mich nicht, danke!" << std::endl << std::endl << "   PvP(r)  PvE(o)  EvE(f) 2v2(l)" << std::endl << "Deine Eingabe: ";
 }
@@ -22,6 +22,7 @@ char Game::GetMenuInput(){
     return eingabe;
 }
 
+//Möchte y oder n
 char Game::getYorN(){
     char eingabe = 't';
 
@@ -36,6 +37,7 @@ char Game::getYorN(){
     return eingabe;
 }
 
+//wählt modus aus
 void Game::startGameMode(char input){
     switch(input){
         case 'r':
@@ -55,6 +57,7 @@ void Game::startGameMode(char input){
         break;
     }
 }
+
 
 def_characters Game::inputPokemon(){
     char eingabe = 'f';
@@ -85,6 +88,7 @@ def_characters Game::inputPokemon(){
     return ch_custom;
 }
 
+//erstellt character und liefert ihn zurück
 Pokemon Game::createCharacter(def_characters userInput){
     switch(userInput){
         case ch_glumanda:{
@@ -113,6 +117,7 @@ Pokemon Game::createCharacter(def_characters userInput){
     }
 }
 
+//wird zufällig ausgewält
 int Game::randomAttack(){
     int randomNum;
 
@@ -132,6 +137,7 @@ int Game::randomAttack(){
     }
 }
 
+//führt status effekt aus
 void Game::doStatusEffect(Pokemon &character){
     int dmg;
 
@@ -149,6 +155,7 @@ void Game::doStatusEffect(Pokemon &character){
     }
 }
 
+//checkt ob character tot ist
 bool Game::isDead(Pokemon &character1, Pokemon &character2){
     if(character2.getHp() <= 0){
         std::cout << character1.getName() << " hat " << character2.getName() << " besiegt!" << std::endl;
@@ -168,6 +175,7 @@ bool Game::isDead(Pokemon &character1, Pokemon &character2){
     return false;
 }
 
+//führt zufällige attacke aus
 bool Game::characterAttack(Pokemon &character1, Pokemon &character2){
     switch(randomAttack()){
         case sl_attackSlot1:
@@ -186,6 +194,7 @@ bool Game::characterAttack(Pokemon &character1, Pokemon &character2){
     return isDead(character1, character2);
 }
 
+//führt immer ersten Angriff aus
 bool Game::characterAttack1(Pokemon &character1, Pokemon &character2){
 
     (character1.*(character1.attack1))(character2);
@@ -197,6 +206,7 @@ bool Game::characterAttack1(Pokemon &character1, Pokemon &character2){
     return isDead(character1, character2);
 }
 
+//EvE random attacke beide
 void Game::FightRandomVsRandom(Pokemon character1, Pokemon character2){
     bool isBreak = false;
     //setzt srand außerhalb schleife
@@ -231,6 +241,7 @@ void Game::FightRandomVsRandom(Pokemon character1, Pokemon character2){
     }
 }
 
+//EvE random attacke gegen nur erste attacke
 void Game::FightRandomVsAttack(Pokemon character1, Pokemon character2){
     bool isBreak = false;
     //setzt srand außerhalb schleife
@@ -265,6 +276,7 @@ void Game::FightRandomVsAttack(Pokemon character1, Pokemon character2){
     }
 }
 
+//EvE nur erste attacke gegen nur erste attacke
 void Game::FightAttackVsAttack(Pokemon character1, Pokemon character2){
     bool isBreak = false;
 
@@ -295,6 +307,7 @@ void Game::FightAttackVsAttack(Pokemon character1, Pokemon character2){
     }
 }
 
+//EvE nur erste attacke gegen random attacke
 void Game::FightAttackVsRandom(Pokemon character1, Pokemon character2){
     bool isBreak = false;
     //setzt srand außerhalb schleife
@@ -328,6 +341,7 @@ void Game::FightAttackVsRandom(Pokemon character1, Pokemon character2){
     }
 }
 
+//startet EvE
 void Game::startEvE(){
     char yOrN = 'f';
 
@@ -362,6 +376,7 @@ void Game::startEvE(){
     }
 }
 
+//gibt WinArray aus
 void Game::printStats(){
     std::cout << std::endl << "Letze 10 K" << (char)132 << "mpfer werden angezeigt:" << std::endl;
 
@@ -370,6 +385,7 @@ void Game::printStats(){
     }
 }
 
+//führt einen vom Spiler ausgewählten angriff aus
 bool Game::playerAttack(Pokemon &character1, Pokemon &character2){
     std::string AttackInput;
     int eingabe = -1;
@@ -414,6 +430,7 @@ bool Game::playerAttack(Pokemon &character1, Pokemon &character2){
     return false;
 }
 
+//PvE
 void Game::FightAgainstPc(Pokemon character1, Pokemon character2){
     bool isBreak = false;
     //setzt srand außerhalb schleife
@@ -448,6 +465,7 @@ void Game::FightAgainstPc(Pokemon character1, Pokemon character2){
     }
 }
 
+//startet PvE
 void Game::startPvE(){
     def_characters userInput;
     Pokemon character1, character2;
@@ -461,6 +479,7 @@ void Game::startPvE(){
     FightAgainstPc(character1, character2);
 }
 
+//PvP
 void Game::FightAgainstPlayer(Pokemon character1, Pokemon character2){
     bool isBreak = false;
     //setzt srand außerhalb schleife
@@ -495,6 +514,7 @@ void Game::FightAgainstPlayer(Pokemon character1, Pokemon character2){
     }
 }
 
+//start PvP
 void Game::startPvP(){
     def_characters userInput;
     Pokemon character1, character2;
@@ -508,6 +528,7 @@ void Game::startPvP(){
     FightAgainstPlayer(character1, character2);
 }
 
+//fürs wechseln
 bool Game::wantToSwitch(){
     char swichInput = 't';
 
@@ -527,6 +548,7 @@ bool Game::wantToSwitch(){
     return false;
 }
 
+//Teamkampf angriff auswählen
 bool Game::playerAttackTeam(Team  &team1, Team &team2){
     std::string AttackInput;
     int eingabe = -1;
@@ -541,26 +563,26 @@ bool Game::playerAttackTeam(Team  &team1, Team &team2){
             switch(eingabe){
                 case 1:
                     if(team2.getActivePokemon() == pa_pokemon1Active){
-                        (team1.getPrimary().*(team1.getPrimary().attack1))(team2.pokemon1);
+                        (team1.getPrimary().*(team1.getPrimary().attack1))(team2.getPokemon1());
                     }else{
-                        (team1.getPrimary().*(team1.getPrimary().attack1))(team2.pokemon2);
+                        (team1.getPrimary().*(team1.getPrimary().attack1))(team2.getPokemon2());
                     }
                 break;
 
                 case 2:
                     if(team2.getActivePokemon() == pa_pokemon1Active){
-                        (team1.getPrimary().*(team1.getPrimary().attack2))(team2.pokemon1);
+                        (team1.getPrimary().*(team1.getPrimary().attack2))(team2.getPokemon1());
                     }else{
-                        (team1.getPrimary().*(team1.getPrimary().attack2))(team2.pokemon2);
+                        (team1.getPrimary().*(team1.getPrimary().attack2))(team2.getPokemon2());
                     }
                 break;
             }
 
             if(team2.getPrimary().getStatus() != ef_none){
                 if(team2.getActivePokemon() == pa_pokemon1Active){
-                    doStatusEffect(team2.pokemon1);
+                    doStatusEffect(team2.getPokemon1());
                 }else{
-                    doStatusEffect(team2.pokemon2);
+                    doStatusEffect(team2.getPokemon2());
                 }
             }
 
@@ -584,6 +606,7 @@ bool Game::playerAttackTeam(Team  &team1, Team &team2){
     return false;
 }
 
+//Teamkampf runde
 void Game::TeamAgainstTeam(Team team1, Team team2){
     bool isBreak = false;
     bool wantSwitch, switchSucces;
@@ -675,7 +698,7 @@ void Game::TeamAgainstTeam(Team team1, Team team2){
         }
     }
 }
-
+//startet 2v2
 void Game::start2v2(){
     std::string teamName;
     def_characters userInput;

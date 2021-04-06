@@ -133,8 +133,6 @@ void testTeamPokemon1And2IsCorrect(){
     Schiggy schiggy;
     Team team(glumanda, schiggy);
 
-    assert(team.pokemon1.getName() == "Glumanda");
-    assert(team.pokemon2.getName() == "Schiggy");
     assert(team.getPokemon1().getName() == "Glumanda");
     assert(team.getPokemon2().getName() == "Schiggy");
 }
